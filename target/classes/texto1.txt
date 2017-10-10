@@ -1,0 +1,12 @@
+No se ha encontrado la orden «nan», quizás quiso decir:
+ La orden «dan» del paquete «emboss» (universe)
+ La orden «na6» del paquete «ipv6toolkit» (universe)
+ La orden «nam» del paquete «nam» (universe)
+ La orden «nn» del paquete «nn» (universe)
+ La orden «nap» del paquete «nap» (universe)
+ La orden «man» del paquete «man-db» (main)
+ La orden «an» del paquete «an» (universe)
+ La orden «nant» del paquete «nant» (universe)
+ La orden «pan» del paquete «pan» (universe)
+ La orden «nano» del paquete «nano» (main)
+nan: no se encontró la orden

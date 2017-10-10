@@ -1,5 +1,4 @@
 package com.rest.classes;
-
 public class Usuario {
 	 private String nombre;
 	 private String apellido;

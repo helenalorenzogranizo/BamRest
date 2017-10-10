@@ -3,7 +3,7 @@
 		 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">   
-	<display-name>BamREST</display-name>
+	<display-name>BamRestService</display-name>
   
 	<!-- Auto scan REST service -->
 	<context-param>
@@ -37,45 +37,54 @@
 	
 	<!-- CROSS DOMAIN -->
 	<!-- permite que se pueda acceder desde una aplicación con otro dominio. -->
-	<filter>
-	        <filter-name>CORS</filter-name> 
-	        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
-	             <init-param>
-	                    <param-name>cors.allowGenericHttpRequests</param-name>
-	                    <param-value>true</param-value>
-	             </init-param>
-	            <init-param>
-	                 <param-name>cors.allowOrigin</param-name>
-	                 <param-value>*</param-value>
-	             </init-param>
-	             <init-param>
-	                    <param-name>cors.supportedMethods</param-name>
-	                    <param-value>GET, HEAD, POST, OPTIONS, PUT, DELETE</param-value>
-	             </init-param>
-	             <init-param>
-	                    <param-name>cors.supportedHeaders</param-name>
-	                    <param-value>Content-Type, X-Requested-With, Accept, Authentication</param-value>
-	             </init-param>
-	             <init-param>
-	                    <param-name>cors.exposedHeaders</param-name>
-	                    <param-value>X-Test-1, X-Test-2</param-value>
-	             </init-param>
-	             <init-param>
-	                    <param-name>cors.supportsCredentials</param-name>
-	                    <param-value>true</param-value> 
-	             </init-param>
-	             <init-param>
-	                    <param-name>cors.maxAge</param-name>
-	                    <param-value>3600</param-value>
-	             </init-param>
-	</filter>
-	   
-	<!-- Cross Domain Mapping --> 
-	<filter-mapping>
-	      <filter-name>CORS</filter-name>
-	      <url-pattern>/*</url-pattern>
-	</filter-mapping>
-  
+<!--      <filter>
+ 
+    <filter-name>CORS</filter-name>
+    <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
 
+    <init-param>
+        <param-name>cors.allowGenericHttpRequests</param-name>
+        <param-value>true</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.allowOrigin</param-name>
+        <param-value>*</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.allowSubdomains</param-name>
+        <param-value>false</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.supportedMethods</param-name>
+        <param-value>GET, HEAD, POST, DELETE, OPTIONS</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.supportedHeaders</param-name>
+        <param-value>*</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.supportsCredentials</param-name>
+        <param-value>true</param-value>
+    </init-param>
+
+    <init-param>
+        <param-name>cors.maxAge</param-name>
+        <param-value>3600</param-value>
+    </init-param>
+
+</filter>
+
+<filter-mapping>  -->
+    <!-- CORS Filter mapping 
+    <filter-name>CORS</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping> -->
+
+ 
 
 </web-app>

@@ -1,27 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  
- <modelVersion>4.0.0</modelVersion>
-
- <groupId>com.rest.docker</groupId>
- <artifactId>BanREST</artifactId>
- <packaging>war</packaging>
- <version>1.0.0</version>
-
- <!-- nombre de la aplicación -->
- <name>BamREST</name>
- <url>http://maven.apache.org</url>
-
- <!-- nombre del archivo WAR final -->
- <build>
-    <directory>${project.basedir}/target</directory>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>BamRestService</groupId>
+  <artifactId>BamRestService</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>BamRestService Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <build>
+     <directory>${project.basedir}/target</directory>
  <plugins>
   <plugin>
    <artifactId>maven-compiler-plugin</artifactId>
    <version>3.1</version>
    <configuration>
-       <source>1.8</source>
-       <target>1.8</target>
+       <source>1.7</source>
+       <target>1.7</target>
    </configuration>
   </plugin>
   <plugin>
@@ -38,9 +32,11 @@
    <configuration>
       <mode>war</mode>
       <server>TomcatServer</server>
-      <url>http://172.17.0.1:8080/manager/text</url>
-       <username>admin</username>
-       <password>tomcat</password>
+          <!--  <url>http://localhost:8080/manager/text</url> --> 
+      	  <!--  <url>http://172.17.0.1:8080/manager/text</url> --> 
+      	   <url>http://192.168.6.173:8080/manager/text</url> 
+      <username>admin</username>
+      <password>tomcat</password> 
       <path>/BamRest</path>
    </configuration>
   </plugin>
@@ -91,7 +87,7 @@
    <version>3.0.4.Final</version>
   </dependency>
   <dependency>
-   <groupId>com.thetransactioncompany</groupId>
+  <groupId>com.thetransactioncompany</groupId>
    <artifactId>cors-filter</artifactId>
    <version>1.7.1</version>
   </dependency>
@@ -104,4 +100,5 @@
 
 
 </project>
+
 
